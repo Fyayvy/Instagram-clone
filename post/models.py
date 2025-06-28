@@ -29,6 +29,8 @@ class Tag(models.Model):
 			self.slug - slugify(self.slug)
 		return super().save(*args, **kwargs)
 
+#this is the post model that creates the post table
+
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     video = models.FileField(upload_to=user_dirctory_path, blank=True, null=True)
